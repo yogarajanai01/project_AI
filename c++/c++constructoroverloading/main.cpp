@@ -10,36 +10,26 @@ public:
     {
         cout << "Welcome Yogarajan K\n" ;
     }
-   constructorsample1()
+   constructorsample( int a)
     {
         cout << "This is first constructor\n";
     }
-   constructorsample2()
+   constructorsample( int a1,int a2)
     {
         cout << "This is second constructor\n";
     }
-   constructorsample3()
+   constructorsample(int b1,int b2,int b3)
     {
         cout << "This is third constructor\n";
     }
-    constructorsample4()
-    {
-        cout << "This is fourth constructor\n";
-    }
-    constructorsample5()
-    {
-         cout << "This is fifth constructor\n";
-    }
-    constructorsample6()
-    {
-         cout << "This is sixth constructor\n";
-    }
-
 };
 
 int main()
 {
       constructorsample cs;
-    cs.constructorsample::constructorsample3();
+      constructorsample cs1(1);
+      constructorsample cs2(1,2);
+      constructorsample cs3(1,2,3);
+
       return 0;
 }
