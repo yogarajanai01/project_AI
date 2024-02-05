@@ -11,265 +11,66 @@ public:
          cout << "\n Enter the brandname :\t";
          cin >> name;
          cout << "\n Hii.. This is the brand of car " << name << endl;
+         cout << "Enter your name\t";
          cin >> cons_name;
          cout << cons_name<< "\tYou have the list of tata cars , Right.";
-         cout << "\n\tTiago\n\tPunch\n\tNano\n\tHarrier\n\tAltroz\n\tNexon\n\tSafari\n\tTigor\n\tNexon EV\n\tTiago NRG\n";
+         cout << "\n\tTiago-a\n\tPunch-b\n\tNano-c\n\tHarrier-d\n\tAltroz-e\n\tNexon-f\n\tSafari-g\n\tTigor-h\n\tNexon EV-i\n\tTiagoNRG-j\n";
      }
      void carName()
      {
+         char cno;
          string carname;
-         cout << "\n Enter the car Name: ";
+         cout << "\n Enter the car Name:\t ";
          cin >> carname;
-     }
-     void cardetails()
-     {
-         int a;
-         cout << "\n\tTiago-1\n\tPunch-2\n\tNano-3\n\tHarrier-4\n\tAltroz-5\n\tNexon-6\n\tSafari-7\n\tTigor-8\n\tNexon EV-9\n\tTiago NRG-10\n";
-         cin >> a;
-
-         switch(a)
-         case 1:
+         cout << "enter the letter\t";
+         cin >> cno;
+         switch(cno)
              {
-             cout << "TATA TIAGO ";
-             break;
-             }
-
-           /*  case 2:
-                 cout << "TATA PUNCH";
+         case 'a':
+                cout << "TATA TIAGO\t" << "sharp hatchback\t" << " cheapest model\t";
+                break;
+         case 'b':
+                 cout << "TATA PUNCH\t" << " best-selling models\t" << " CNG-powered version\t ";
                  break;
-                 case 3:
-                     cout << "TATA NANO";
-                     break;
-                     case 4:
-                         cout << "TATA HARRIER";
-                         break;
-                         case 5:
-                             cout << "TATA ALTROZ";
-                             break;
-                             case 6:
-                                 cout << "TATA NEXON";
-                                 break;
-                                case 7:
-                                    cout << "TATA SAFARI";
-                                    break;
-                                    case 8:
-                                        cout << "TATA TIGOR";
-                                        break;
-                                        case 9:
-                                            cout << "TATA NEXON - EV";
-                                            break;
-                                           case 10:
-                                               cout << "TATA TIAGO NRG";
-                                               break;*/
-
+         case 'c':
+                 cout << "TATA NANO\t" << " world's cheapest car\t" << " ₹ 2.36 to 3.35 Lakh.\t";
+                 break;
+         case 'd':
+                 cout << "TATA HARRIER\t" << "a 5-seater SUV that rivals the MG Hector and Jeep Compass.\t" << "facelift looks bolder, gets smarter tech, and more premium creature comforts.\t";
+                 break;
+         case 'e':
+                 cout << "TATA ALTROZ\t" << " Tigor is the only sedan in the line-up.\t" << "e gold standard of hatchbacks. It has it all – Style, Safety, Performance and Technology ...\t";
+                 break;
+         case 'f':
+                cout << "TATA NEXON\t" << "first crossover SUV\t" << "better options in the subcompact SUV space.\t ";
+                break;
+         case 'g':
+                cout << "TATA SAFARI\t" << "premium luxury with its opulent interiors,Plush Upholstery & advanced infotainment system\t" << "Offering a rugged blend of luxury and capability \t";
+                break;
+         case 'h':
+                cout << "TATA TIGOR\t" << " is the only sedan in the line-up.\t" << " rated safety, stylish design, spacious and comfortable cabin, diesel and EV powertrains, and lastly, for the amount of new .\t";
+                break;
+         case 'i':
+                cout << "TATA NEXON - EV\t" << "Tata Nexon EV Max review - useful real-world range tested!\t" << "31.24 cm Cinematic Touchscreen by HARMAN™ · 9 Speakers · 26.03 cm HD fully reconfigurable Instrument Cluster · 6 Airbags.\t";
+                break;
+         case 'j':
+                cout << "TATA TIAGO NRG\t" << " beefy-looking hatchbacks\t" << " base model starts at Rs. 6.70 Lakh and the top model price goes upto Rs. 8.64 Lakh\t";
+                break;
+         default:
+                break;
+             }
      }
 };
-
-
-
-
-
-
 
 int main()
 {
     car c;
     c.brandname();
     c.carName();
-
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*#include <iostream>
+/*
+#include <iostream>
 
 using namespace std;
 
@@ -303,7 +104,7 @@ class son : public parentfather,public parentmother
 int main()
 {
     son s;
-    //s.dad();
+    s.dad();
     s.mom();
     return 0;
 }*/

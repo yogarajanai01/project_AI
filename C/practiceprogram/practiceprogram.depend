@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1706934560 source:c:\users\user\desktop\aibatchyoga\project_ai\c\practiceprogram\main.c
+	<stdio.h>
+	<stdlib.h>
+
