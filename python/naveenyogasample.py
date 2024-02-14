@@ -50,12 +50,14 @@ class dialogue:
    def vadivelu():
     print("smart comedian in tamil")
 
-    def sathish():
+   def sathish():
      print("new comedian in tamil movie industry")
 
-    def yogibabu():
+   def yogibabu():
      print("the cheerful comedian who acts like a original ")  
 
 
 
 dialogue.vadivelu()
+dialogue.sathish()
+dialogue.yogibabu()
