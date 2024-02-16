@@ -27,7 +27,7 @@ inputbox2.grid(row=1, column=2)
 clickme=Button(app, text="details for given car", command=clickresult, )
 clickme.grid(row=3, column=8, padx=40, pady=40)
 
-labelouptut=Label(app,text="")
+labelouptut=Label(app,text=" details")
 labelouptut.grid(row=3,column=30, pady=20)
 
 app.mainloop()
