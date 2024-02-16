@@ -8,14 +8,12 @@ car.state("zoomed")
 car.config(bg="blue")
 
 def details(): 
-    a=str("details for")
-    b=str(tbentry1)
-    c=str("cars is given")
-    d=str(a,b,c)
-    labelouptut.config(details,text="d")
+    tb1=(tbentry1.get())
+    labelouptut.config(text="Details of"+" "+tb1+" "+"cars is given.")
 
 def info():
-    labelouptut2.config(text="tata  are safe and secure ")
+    tb2=(tbentry2.get())
+    labelouptut2.config(text="tata"+" "+tb2+" "+"are safe and secure.")
 
 labeltitle=Label(car,text="brand name",bg="white")
 labeltitle.grid(row=0,column=20,padx=200,pady=30)
