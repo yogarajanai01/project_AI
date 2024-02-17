@@ -38,4 +38,7 @@ btnAdd.grid(row=4, column=20)
 
 btnAdd=Button(car,text="info", command=info)
 btnAdd.grid(row=4, column=50)
+
 car.mainloop()
+
+
