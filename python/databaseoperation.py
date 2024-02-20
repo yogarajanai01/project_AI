@@ -30,8 +30,7 @@ def insert():
     valuephy=int(inputP.get())
 
     e_con=Mydbconnection()
-    result=e_con.cursor
-
+    result=e_con.cursor()
 
     statement="insert into STD_MARKS (Name,Roll_No,TAMIL,ENGLISH,MATHS,PHYSICS) VALUES (%s,%s,%s,%s,%s,%s);"
     valuepass=(valuename,valueRollNo,valuetam,valueeng,valuemath,valuephy)
@@ -120,7 +119,7 @@ insbut.config(bg="dark red")
 
 
 
-mainloop()
+data.mainloop()
 
 
 
