@@ -37,12 +37,95 @@ def insert():
     result.execute(statement,valuepass)
     e_con.commit()
 
-    print(result.rowcount, " row inserted")
+    outmsg.config(text="row inserted")
 
-def update():
-     pass
+def updatename():
+    valuename=str(inputName.get())
+    Sno=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="update STD_MARKS set Name = (%s) where SNO =(%s);"
+    valuepass=(valuename,Sno)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="Name updated")
+
+def updateroll():
+    valueRoll=int(inputroll.get())
+    Sno=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="update STD_MARKS set Roll_No = (%s) where SNO =(%s);"
+    valuepass=(valueRoll,Sno)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="Roll updated")
+
+def updateTAMIL():
+    valueRoll=int(inputt.get())
+    Sno=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="update STD_MARKS set TAMIL = (%s) where SNO =(%s);"
+    valuepass=(valueRoll,Sno)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="Tamil mark updated")
+def updateEng():
+    valueRoll=int(inputE.get())
+    Sno=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="update STD_MARKS set ENGLISH = (%s) where SNO =(%s);"
+    valuepass=(valueRoll,Sno)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="English mark updated")
+    
+def updateMath():
+    valueRoll=int(inputM.get())
+    Sno=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="update STD_MARKS set MATHS = (%s) where SNO =(%s);"
+    valuepass=(valueRoll,Sno)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="Maths mark updated")
+
+def updatePhy():
+    valueRoll=int(inputP.get())
+    Sno=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="update STD_MARKS set PHYSICS = (%s) where SNO =(%s);"
+    valuepass=(valueRoll,Sno)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="Physics mark updated")
 def delete():
-    pass
+    SNO=int(inputsno.get())
+    e_con=Mydbconnection()
+    result=e_con.cursor()
+
+    statement="Delete from STD_MARKS where SNO=(%s);"
+    valuepass=(SNO,)
+    result.execute(statement,valuepass)
+    e_con.commit()
+
+    outmsg.config(text="deleted")
 def reset():
     pass
 def truncate():
@@ -101,11 +184,31 @@ insbut=Button(data,text="INSERT",command=insert)
 insbut.grid(row=25,column=20,padx=40,pady=40)
 insbut.config(bg="black",fg="white")
 
-insbut=Button(data,text="UPDATE")
-insbut.grid(row=25,column=50,padx=40,pady=40)
+insbut=Button(data,text="UPDATENAME",command=updatename)
+insbut.grid(row=25,column=50,padx=40,pady=10)
 insbut.config(bg="green",fg="yellow")
 
-insbut=Button(data,text="DELETE")
+insbut=Button(data,text="UPDATEROLLNO",command=updateroll)
+insbut.grid(row=26,column=50,pady=10)
+insbut.config(bg="green",fg="yellow")
+
+insbut=Button(data,text="UPDATETAMIL",command=updateTAMIL)
+insbut.grid(row=27,column=50,pady=10)
+insbut.config(bg="green",fg="yellow")
+
+insbut=Button(data,text="UPDATEENGLISH",command=updateEng)
+insbut.grid(row=28,column=50,pady=10)
+insbut.config(bg="green",fg="yellow")
+
+insbut=Button(data,text="UPDATEMATHS",command=updateMath)
+insbut.grid(row=29,column=50,pady=10)
+insbut.config(bg="green",fg="yellow")
+
+insbut=Button(data,text="UPDATEPHYSICS",command=updatePhy)
+insbut.grid(row=30,column=50,pady=10)
+insbut.config(bg="green",fg="yellow")
+
+insbut=Button(data,text="DELETE",command=delete)
 insbut.grid(row=25,column=80,padx=40,pady=40)
 insbut.config(bg="red")
 
@@ -117,7 +220,14 @@ insbut=Button(data,text="TRUNCATE")
 insbut.grid(row=25,column=250,padx=40,pady=40)
 insbut.config(bg="dark red")
 
+lblsno=Label(data,text="SNO",bg="white",fg="black")
+lblsno.grid(row=0,column=400)
 
+inputsno=Entry(data,text="",bg="white",fg="black")
+inputsno.grid(row=0,column=550)
+
+outmsg=Label(data,text="output",bg="white",fg="black")
+outmsg.grid(row=2,column=400)
 
 data.mainloop()
 
